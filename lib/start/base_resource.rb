@@ -11,6 +11,10 @@ module Start
         handle_response Start.get("#{path}/#{id}")
       end
 
+      def update(id, params)
+        handle_response Start.put("#{path}/#{id}", body: params)
+      end
+
       def all
         handle_response Start.get(path)
       end
