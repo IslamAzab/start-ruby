@@ -10,7 +10,7 @@ module Start
     #          cvc: 123
     #        }
     #      }
-    def add_card id, card_options
+    def self.add_card id, card_options
       handle_response Start.post("#{path}/#{id}/cards", body: card_options)
     end
   end
